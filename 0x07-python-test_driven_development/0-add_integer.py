@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Module which adds two integer or float numbers"""
+"""
+This is the "0-add_integer" module.
+The 0-add_integer module supplies one function, add_integer(a, b=98).
+"""
 
 def add_integer(a, b=98):
     """Function to add two integer or float number and return their sum"""
