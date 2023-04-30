@@ -9,10 +9,8 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer or a float")
 
     if isinstance(a, float):
-        a //= 1
+        a = int(a) 
     if isinstance(b, float):
-        b //= 1
+        b = int(b)
 
-    result = a
-    result += b
-    return result
+    return a + b
