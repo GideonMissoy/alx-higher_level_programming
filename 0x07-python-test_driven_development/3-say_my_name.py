@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Module which prints a given first and last name"""
+"""
+Module which prints a given first and last name
+"""
+
+
 def say_my_name(first_name, last_name=""):
     """Prints a given first and last name"""
     if not isinstance(first_name, str):
