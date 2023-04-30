@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 """defines function to scalar divide matrix"""
 
+
 def matrix_divided(matrix, div):
-    """Divides a matrix by a scalar integer and rounds to two decimal places."""
+    """
+    Divides a matrix by a scalar integer and rounds to two decimal places.
+    """
     if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
