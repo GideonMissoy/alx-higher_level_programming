@@ -90,8 +90,10 @@ class Rectangle:
         """
         Calculates the perimeter of the rectangle.
         """
-        return 2 * (self.__width + self.__height)
-                             if self.__width and self.__height else 0
+        if self.__width and self.__height:
+            return 2 * (self.__width + self.__height)
+        else:
+            return 0
 
     def __str__(self):
         """
