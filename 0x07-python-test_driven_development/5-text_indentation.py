@@ -1,24 +1,15 @@
-#!/usr/bin/python3#!/usr/bin/python3
+#!/usr/bin/python3
 
 def text_indentation(text):
-    """Indents the sentences in a string by adding extra lines and removing leading whitespace."""
+    """Prints a text with two new lines after each occurrence of ".", "?", or ":"."""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    # Replace all sentence-ending punctuation with the punctuation followed by two newlines
-    sentences = ''
+    new_text = ''
     for char in text:
-        if char in '.?!':
-            sentences += char + '\n\n'
-        elif char == ':':
-            sentences += char + '\n'
-
+        if char in '.?:':
+            new_text += char + '\n\n'
         else:
-            sentences += char
+            new_text += char
 
-    # Split the resulting string into a list of lines, remove leading whitespace, and re-join the lines
-    indented_lines = [line.lstrip() for line in sentences.splitlines()]
-    indented_text = '\n'.join(indented_lines)
-
-    # Return the resulting string
-    return indented_text
+    print(new_text)
