@@ -13,7 +13,7 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """returns a new Rectangle instance with width == height == size"""
-        return cls(size, size)
+        return Rectangle(size, size)
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
@@ -66,22 +66,22 @@ class Rectangle:
 
     def area(self):
         """area of the rectangle"""
-        return (self.__width * self.__height)
+        return (self.width * self.height)
 
     def perimeter(self):
         """perimeter of the rectangle"""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return 0
-        return ((self.__width * 2) + (self.__height * 2))
+        return 2 * (self.width + self.height)
 
     def __str__(self):
         """print the rectangle with the character #"""
         Estring = ""
-        if self.__width != 0 and self.__height != 0:
-            Estring += "\n".join(str(self.print_symbol) * self.__width
-                                for i in range(self.__height))
+        if self.__width != 0 and self.height != 0:
+            Estring += "\n".join(str(self.print_symbol) * self.width
+                                for i in range(self.height))
         return Estring
 
     def __repr__(self):
         """return a string representation of the rectangle"""
-        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)
