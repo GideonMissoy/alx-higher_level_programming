@@ -8,19 +8,17 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    # Replace sentence-ending punctuation with the punctuation followed by two newlines
+    # Replace sentence-ending punctuation with the punctuation,
+    # followed by two newlines
     sentences = ''
     for char in text:
-        if char in '.?!':
+        if char in '.?:':
             sentences += char + '\n\n'
-        elif char == ':':
-            sentences += char + '\n'
         else:
             sentences += char
 
-    # Split the resulting string into a list of lines, remove leading and trailing whitespace,
-    # and print each line
+    # Split the resulting string into a list of lines,
+    # remove leading and trailing whitespace, and print each line
     lines = [line.strip() for line in sentences.splitlines()]
     for line in lines:
         print(line)
-
