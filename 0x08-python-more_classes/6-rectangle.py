@@ -86,7 +86,7 @@ class Rectangle:
 
         if self.__width != 0 and self.__height != 0:
             Estring += "\n".join("#" * self.__width
-                                    for i in range(self.__height))
+                                for i in range(self.__height))
 
         return Estring
 
