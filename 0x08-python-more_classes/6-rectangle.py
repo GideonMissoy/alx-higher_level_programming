@@ -11,16 +11,21 @@ class Rectangle:
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
-        """Initializer method that sets the width and height of a new rectangle"""
+        """
+        Initializer method that sets the width and height of a new rectangle
+        """
 
         self.width = width
         self.height = height
 
-        # Increment the number of instances every time a new Rectangle object is created
+        # Increment the number of instances
+        # every time a new Rectangle object is created
         Rectangle.number_of_instances += 1
 
     def __del__(self):
-        """Destructor method that is called when a Rectangle object is deleted"""
+        """
+        Destructor method that is called when a Rectangle object is deleted
+        """
 
         print("Bye rectangle...")
 
@@ -80,11 +85,15 @@ class Rectangle:
         Estring = ""
 
         if self.__width != 0 and self.__height != 0:
-            Estring += "\n".join("#" * self.__width for i in range(self.__height))
+            Estring += "\n".join("#" * self.__width
+                                    for i in range(self.__height))
 
         return Estring
 
     def __repr__(self):
-        """Method that returns a string representation of the rectangle that can be used to recreate it"""
+        """
+        Method that returns a string representation of the rectangle,
+        that can be used to recreate it
+        """
 
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
