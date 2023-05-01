@@ -77,10 +77,14 @@ class Rectangle:
     def __str__(self):
         """print the rectangle with the character #"""
         Estring = ""
-        if self.width != 0 and self.height != 0:
-            Estring += "\n".join(str(self.print_symbol) * self.width
-                                for i in range(self.height))
-        return Estring
+        if self.width == 0 and self.height == 0:
+            return ''
+        else:
+            s = str(self.print_symbol)
+            w = self.width
+            h = self.height
+            res = map(lambda x: (s * w) + ('\n' * (x != h - 1)), range(h))
+            return ''.join(list(res))
 
     def __repr__(self):
         """return a string representation of the rectangle"""
