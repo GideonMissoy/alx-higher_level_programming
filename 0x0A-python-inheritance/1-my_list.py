@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-MyList inherits list.
+class MyList that inherits list.
 """
 
 
@@ -24,4 +24,3 @@ class MyClass(list):
         and then prints the sorted list.
         """
         print(sorted(self))
-
