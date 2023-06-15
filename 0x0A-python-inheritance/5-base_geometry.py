@@ -5,6 +5,5 @@ This module writes an empty class BaseGeometry.
 
 
 class BaseGeometry:
-	"""Defines an empty class."""
-	pass
-
+    """Defines an empty class."""
+    pass
