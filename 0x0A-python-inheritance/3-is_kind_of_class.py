@@ -7,5 +7,5 @@ otherwise False
 
 
 def is_kind_of_class(obj, a_class):
-	"""True if object is an instance of or inherited from a class."""
-	return (isinstance(obj, a_class))
+    """True if object is an instance of or inherited from a class."""
+    return (isinstance(obj, a_class))
