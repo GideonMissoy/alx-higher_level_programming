@@ -17,4 +17,3 @@ class MyInt(int):
     def __ne__(self, other):
         """Inverting == operator to !="""
         return int(self) == other
-
