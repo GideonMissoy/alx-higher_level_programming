@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """
-This module uses funtions save_to_json_file and load_from_json_file
 This script adds all args to a python list, and then save to a file
 """
 
@@ -15,7 +14,7 @@ try:
 except FileNotFoundError:
     json_list = []
 
-for arg in args_list:
+for arg in argv[1:]:
     json_list.append(arg)
 
 # Save the list to add_item.json
