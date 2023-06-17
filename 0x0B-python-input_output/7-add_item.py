@@ -5,7 +5,6 @@ This script adds all args to a python list, and then save to a file
 """
 
 from sys import argv
-
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
@@ -17,7 +16,7 @@ except FileNotFoundError:
     json_list = []
 
 for arg in args_list:
-    file.append(arg)
+    json_list.append(arg)
 
 # Save the list to add_item.json
 save_to_json_file(json_list, file)
