@@ -16,7 +16,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """initializes the rectangle."""
         self.height = height
-        self.width = height
+        self.width = width
         Rectangle.number_of_instances += 1
 
     def __del__(self):
@@ -66,8 +66,9 @@ class Rectangle:
         """prints the rectangle instance with the character '#'"""
         Estring = ""
         if self.__width != 0 and self.__height != 0:
-            Estring += "\n".join(print_symbol * self.__width
+            Estring += "\n".join(str(self.print_symbol) * self.__width
                                  for i in range(self.__height))
+        return Estring
 
     def __repr__(self):
         """returns a string rep of the rect for reproduction."""
