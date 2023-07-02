@@ -66,7 +66,7 @@ class Rectangle:
         """prints the rectangle instance with the character '#'"""
         Estring = ""
         if self.__width != 0 and self.__height != 0:
-            Estring += "\n".join(str(self.print_symbol) * self.__width
+            Estring += "\n".join(print_symbol * self.__width
                                  for i in range(self.__height))
 
     def __repr__(self):
