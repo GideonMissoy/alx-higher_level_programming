@@ -9,6 +9,10 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
+    def set_print_symbol(cls, symbol):
+        """sets printing symbol."""
+        cls.print_symbol = symbol
+
     def __init__(self, width=0, height=0):
         """initializes the rectangle."""
         self.height = height
