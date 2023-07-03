@@ -14,11 +14,6 @@ class Rectangle:
         """sets printing symbol."""
         cls.print_symbol = symbol
 
-    @classmethod
-    def square(cls, size=0):
-        """returns a new Rect instance with width == height"""
-        return cls(size, size)
-
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """returns the biggest rectangle based on the area"""
@@ -90,3 +85,8 @@ class Rectangle:
     def __repr__(self):
         """returns a string rep of the rect for reproduction."""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    @classmethod
+    def square(cls, size=0):
+        """Rep a square instance of rect, with width=height=size"""
+        return (cls(size, size))
