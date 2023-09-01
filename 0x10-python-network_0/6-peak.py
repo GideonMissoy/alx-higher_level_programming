@@ -3,7 +3,6 @@
 Function finds a peak in a list of unsorted integers.
 """
 
-
 def find_peak(list_of_integers):
     """finds the peak in a list of ints."""
     if list_of_integers == []:
