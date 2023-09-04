@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Creates the State "California" with the 
+Creates the State "California" with the
 City "San Francisco" from a database
 """
 from sys import argv
