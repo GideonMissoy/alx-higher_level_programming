@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """
-Script lists all states with a name starting with
-N from the database hbtn_0e_0_usa
+Script lists all states with a name
+starting with `N` from
+the database hbtn_0e_0_usa
 """
-
 import MySQLdb
 from sys import argv
+
 
 if __name__ == '__name__':
     """
