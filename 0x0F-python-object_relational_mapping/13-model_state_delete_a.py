@@ -12,6 +12,10 @@ from sqlalchemy.orm import sessionmaker
 if __name__ == "__main__":
     """Deletes State objects on the database."""
 
+    # Check if correct num of command line args are provided.
+    if len(argv) != 4:
+        exit(1)
+
     db_uri = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         argv[1], argv[2], argv[3])
     engine = create_engine(db_uri)
